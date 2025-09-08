@@ -16,13 +16,13 @@
     /* --height-header: 180px; */
     --height-main: 671px;
     --height-aside: 674px;
-    --height-footer: 180px;
+    --height-footer: 120px;
 }
 
 
 body {
     display: grid;
-    grid-template-columns: 300px 1fr 1fr;
+    grid-template-columns: 200px 1fr 1fr;
     grid-template-rows: 100px auto 100px;
 
     grid-template-areas: 
@@ -83,12 +83,32 @@ header div a {
     padding: 10px;
 }
 
+
+
+
+
+
+
 aside {
     display: block;
     background-color: var(--color-aside);
     height: var(--height-aside);
     grid-area: sidebar;
 }
+
+
+aside
+
+aside a {
+    text-decoration: none;
+}
+
+
+
+
+
+
+
 
 main {
     display: block;
