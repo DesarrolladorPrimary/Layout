@@ -11,46 +11,50 @@
     --color-footer: cyan;
     --width-total: 1910px;
     --width-aside: 300px;
-    --height-header: 140px;
-    --height-main: 673px;
+    --height-header: 180px;
+    --height-main: 671px;
     --height-aside: 674px;
-    --height-footer: 140px;
+    --height-footer: 180px;
 }
 
 
 body {
-    display: flex;
-    flex-wrap:wrap ;
-    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px auto 100px;
+
+    grid-template-areas: 
+        "header header header"
+        "sidebar main main"
+        "footer footer footer";
 }
 
 
 header {
     background-color: var(--color-header);
-    width: var(--width-total);
     height: var(--height-header);
+    grid-area: header;
 }
 
 aside {
     display: block;
     background-color: var(--color-aside);
-    width: var(--width-aside);
     height: var(--height-aside);
+    grid-area: sidebar;
 }
 
 main {
     display: block;
     background-color: var(--color-main);
-    width: calc(var(--width-total) - var(--width-aside));
     height: var(--height-main);
     align-items: center;
+    grid-area: main;
 }
 
 footer {
     background-color: var(--color-footer);
-    width: var(--width-total);
     height: var(--height-footer);
-    justify-self: flex-end;
+    grid-area: footer;
 
 }
 
