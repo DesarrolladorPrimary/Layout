@@ -23,7 +23,7 @@
 body {
     display: grid;
     grid-template-columns: 200px 1fr 1fr;
-    grid-template-rows: 100px auto 100px;
+    grid-template-rows: 100px auto auto;
 
     grid-template-areas: 
         "header header header"
@@ -181,9 +181,80 @@ main p {
 
 footer {
     background-color: var(--color-footer);
-    height: var(--height-footer);
     grid-area: footer;
+    padding: 40px 20px 20px;
+    color: white;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 40px;
+}
 
+footer div {
+    display: flex;
+    flex-direction: column;
+}
+
+footer h3 {
+    color: #fff;
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+footer h4 {
+    color: #fff;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+footer p {
+    color: #ccc;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin-bottom: 8px;
+}
+
+footer ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer ul li a:hover {
+    color: #fff;
+}
+
+footer div div {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+footer div div a {
+    font-size: 20px;
+    text-decoration: none;
+    transition: transform 0.3s;
+}
+
+footer div div a:hover {
+    transform: scale(1.1);
+}
+
+footer > p {
+    grid-column: 1 / -1;
+    border-top: 1px solid #555;
+    margin-top: 20px;
+    padding-top: 15px;
+    text-align: center;
+    color: #ccc;
 }
 
 
