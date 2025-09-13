@@ -90,17 +90,43 @@ header div a {
 
 
 aside {
-    display: block;
     background-color: var(--color-aside);
     height: var(--height-aside);
     grid-area: sidebar;
 }
 
+aside nav {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
 
-aside
+aside nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    list-style: none;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+aside nav li {
+    list-style: none;
+}
 
 aside a {
+    display: block;
     text-decoration: none;
+    color: black;
+    padding: 15px 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+aside a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 
